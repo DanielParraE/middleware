@@ -5,6 +5,7 @@
  */
 package principal;
 
+import cliente.Cliente;
 import java.io.IOException;
 import java.util.Arrays;
 import server.Servidor;
@@ -26,20 +27,6 @@ public class MainServer {
         } catch (IOException e) {
             System.out.println(Arrays.toString(e.getStackTrace()));
         }
-        
-//        Materia mat = new Materia();
-//        mat.setCalificacion(10);
-//        mat.setNombre("Matematicas");
-//        
-//        Materia mat1 = new Materia();
-//        mat1.setCalificacion(8);
-//        mat1.setNombre("Sistemas Operativos");
-//        
-//        Boleta bol = new Boleta();
-//        ArrayList<Materia> mats = new ArrayList<>();
-//        mats.add(mat);
-//        mats.add(mat1);
-//        bol.setMaterias(mats);
 
     }
 

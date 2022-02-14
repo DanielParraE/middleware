@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.DataOutputStream;
 import java.io.PrintWriter;
 import java.net.Socket;
+import logica.Interpreter;
 
 public class Cliente {
     
@@ -21,6 +22,8 @@ public class Cliente {
     public void sendMessage(String message) {
         
         try {
+            
+            Interpreter.convert(message);
             
             PrintWriter pw = new PrintWriter(clientSocket.getOutputStream(), true);
             

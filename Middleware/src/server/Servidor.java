@@ -1,5 +1,6 @@
 package server;
 
+import cliente.Cliente;
 import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
@@ -39,11 +40,12 @@ public class Servidor {
                 //Se obtiene el flujo entrante desde el cliente
                 String mensajeServidor;
                 BufferedReader entrada = new BufferedReader(new InputStreamReader(cs.getInputStream()));
-
+                Cliente clienteLocal = new Cliente();
                 while ((mensajeServidor = entrada.readLine()) != null) //Mientras haya mensajes desde el cliente
                 {
                     //Se muestra por pantalla el mensaje recibido
                     System.out.println(mensajeServidor);
+                    clienteLocal.sendMessage(mensajeServidor);
                 }
 
                 // System.out.println("Fin de la conexión");
